@@ -6,6 +6,12 @@
 	let src = 'favicon.png';
 	// string変数
 	let string = `this string contains some <strong>HTML!!!</strong>`;
+
+	let count = 0;
+
+function incrementCount() {
+	count += 1;
+}
 </script>
 
 <!-- Hello world!にtailwindcssでスタイルをつける -->
@@ -16,3 +22,7 @@
 <img {src} alt="svelte" />
 <!-- {@html ...} という特別なタグを使う https://svelte.jp/tutorial/html-tags -->
 <p>{@html string}</p>
+
+<button on:click={incrementCount}>
+	Clicked {count} {count === 1 ? 'time' : 'times'}
+</button>
