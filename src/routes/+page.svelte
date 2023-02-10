@@ -8,10 +8,11 @@
 	let string = `this string contains some <strong>HTML!!!</strong>`;
 
 	let count = 0;
+	$: doubled = count * 2;
 
-function incrementCount() {
-	count += 1;
-}
+	function handleClick() {
+		count += 1;
+	}
 </script>
 
 <!-- Hello world!にtailwindcssでスタイルをつける -->
@@ -23,6 +24,8 @@ function incrementCount() {
 <!-- {@html ...} という特別なタグを使う https://svelte.jp/tutorial/html-tags -->
 <p>{@html string}</p>
 
-<button on:click={incrementCount}>
+<button on:click={handleClick}>
 	Clicked {count} {count === 1 ? 'time' : 'times'}
 </button>
+
+<p>{count} doubled is {doubled}</p>
