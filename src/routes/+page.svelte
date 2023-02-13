@@ -12,7 +12,12 @@
 	// $:意味がわからない,letにすると計算してくれない（だから計算白的な意味？）
 	$: doubled = count * 2;
 
-	// HTML側の引数handleClickが押されたとき
+	
+	$: if (count >= 10) {
+		alert('count is dangerously high!');
+		count = 9;
+	}
+// HTML側の引数handleClickが押されたとき
 	// functionはjsの引数に指定したものに返すもの？
 	function handleClick() {
 		count += 1;
@@ -33,6 +38,8 @@
 <button on:click={handleClick}>
 	<!-- ?がif文っぽいtrue->time false->times -->
 	Clicked {count} {count === 1 ? 'time' : 'times'}
+
+	
 </button>
 
 <!-- count変数の中とcountの値を２倍したdoubled変数 -->
@@ -40,3 +47,4 @@
 
 <!-- 2月11日今日はお休み -->
 <!-- 2/12おやすみ -->
+
