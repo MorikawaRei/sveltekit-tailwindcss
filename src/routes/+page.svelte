@@ -24,9 +24,11 @@
 </script>
 
 <!-- Hello world!にtailwindcssでスタイルをつける -->
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
+<h2 class="text-3xl font-bold underline">Hello world!</h2>
 <!-- マークアップからnameを参照する -->
 <h2>Hello {name}!</h2>
+<!-- toUpperCase()で大文字で変数の中身を表示 -->
+<h2>Hello {name.toUpperCase()}!</h2>
 <!-- srcを参照 -->
 <img {src} alt="svelte" />
 <!-- {@html ...} という特別なタグを使う https://svelte.jp/tutorial/html-tags -->
