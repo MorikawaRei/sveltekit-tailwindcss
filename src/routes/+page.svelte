@@ -44,6 +44,3 @@
 
 <!-- count変数の中とcountの値を２倍したdoubled変数 -->
 <p>{count} doubled is {doubled}</p>
-
-<!-- 2月11日今日はお休み -->
-<!-- 2/12おやすみ -->
