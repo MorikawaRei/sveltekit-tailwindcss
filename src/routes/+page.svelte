@@ -1,4 +1,4 @@
-<!-- scriptで変数を作る -->
+<!-- scriptの中はjsでその中にはんすうを作っている -->
 <script>
 	// name変数を宣言する
 	let name = 'world';
