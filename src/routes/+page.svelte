@@ -1,5 +1,7 @@
 <!-- scriptの中はjsでその中にはんすうを作っている -->
 <script>
+	// importして名前を決めるfromでどこから参照するか決める
+	import Nested from '../components/nested.svelte';
 	// name変数を宣言する
 	let name = 'world';
 	// src変数
@@ -16,7 +18,7 @@
 		alert('count is dangerously high!');
 		count = 9;
 	}
-// HTML側の引数handleClickが押されたとき
+	// HTML側の引数handleClickが押されたとき
 	// functionはjsの引数に指定したものに返すもの？
 	function handleClick() {
 		count += 1;
@@ -31,14 +33,18 @@
 <h2>Hello {name.toUpperCase()}!</h2>
 <!-- srcを参照 -->
 <img {src} alt="svelte" />
+
+<!-- import(コンポーネント化)したものをこの位置に置く -->
+<Nested />
 <!-- {@html ...} という特別なタグを使う https://svelte.jp/tutorial/html-tags -->
 <p>{@html string}</p>
 
-<!--　handleClickはbuttonが押されたときの動き -->
+<!-- handleClickはbuttonが押されたときの動き -->
 <!-- on:clickはボタンがclickしたときに起動する処理(handleClick変数の処理) -->
 <button on:click={handleClick}>
 	<!-- ?がif文っぽいtrue->time false->times -->
-	Clicked {count} {count === 1 ? 'time' : 'times'}
+	Clicked {count}
+	{count === 1 ? 'time' : 'times'}
 </button>
 <!-- count変数の中とcountの値を２倍したdoubled変数 -->
 <p>{count} doubled is {doubled}</p>
