@@ -12,7 +12,6 @@
 	// $:意味がわからない,letにすると計算してくれない（だから計算白的な意味？）
 	$: doubled = count * 2;
 
-	
 	$: if (count >= 10) {
 		alert('count is dangerously high!');
 		count = 9;
@@ -38,9 +37,6 @@
 <button on:click={handleClick}>
 	<!-- ?がif文っぽいtrue->time false->times -->
 	Clicked {count} {count === 1 ? 'time' : 'times'}
-
-	
 </button>
-
 <!-- count変数の中とcountの値を２倍したdoubled変数 -->
 <p>{count} doubled is {doubled}</p>
